@@ -20,10 +20,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Adafruit_NeoPixel stud = Adafruit_NeoPixel(22, 3, NEO_GRB + NEO_KHZ800); 
 Adafruit_NeoPixel vent= Adafruit_NeoPixel(22, 5, NEO_GRB + NEO_KHZ800);
-Adafruit_NeoPixel shoulder = Adafruit_NeoPixel(22, 6, NEO_GRB + NEO_KHZ800);
-Adafruit_NeoPixel grid = Adafruit_NeoPixel(22, 9, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel shoulder = Adafruit_NeoPixel(22, 9, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel grid = Adafruit_NeoPixel(22, 6, NEO_GRB + NEO_KHZ800);
 
 void setup() {
+  Serial.begin(9600);
+  Serial.println("Give me a minute.");
+
   stud.begin();
   vent.begin();  
   shoulder.begin();
